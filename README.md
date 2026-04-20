@@ -1,73 +1,52 @@
-# React + TypeScript + Vite
+# Austen Engineering & Solutions
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bem-vindo ao repositório do site institucional da **Austen Engineering & Solutions**. 
+Este projeto é uma Landing Page super responsiva e moderna focada na apresentação dos serviços de **RPA**, **Chatbots**, **Energia Solar** e **Visão Computacional**.
 
-Currently, two official plugins are available:
+Essa aplicação foi desenvolvida focada em facilidade de manutenção e alta performance de renderização, utilizando **React, Vite e TypeScript** com um Design System inteiramente customizado em Vanilla CSS.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🗂 Estrutura de Variáveis (Configuração Rápida)
 
-## React Compiler
+Para facilitar futuras integrações com bancos de dados, todas as informações essenciais do site (como Endereço, Número do WhatsApp e Nome da Empresa) estão **centralizadas** em um único local: `src/config/siteData.ts`. 
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Se precisar mudar o DDD, e-mail de contato, ou endereço no futuro, basta alterar neste arquivo e os componentes `Header` e `Footer` já refletirão no site todo instantaneamente!
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 💻 Como Rodar o Site Localmente (em sua máquina)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Certifique-se de ter o **[Node.js](https://nodejs.org/en/)** (Versão 22.x LTS recomendada) instalado.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+1. **Baixe ou clone o repositório** e acesse a pasta raiz (se chama `austen/`).
+2. **Abra o terminal** na pasta do projeto e rode o comando para instalar os pacotes e construir o "motor":
+   ```bash
+   npm install
+   ```
+3. **Inicie o Servidor Local** para abrir e desenvolver a página em tempo real:
+   ```bash
+   npm run dev
+   ```
+4. O terminal exibirá um link (geralmente `http://localhost:5173/`). Acesse esse link via Google Chrome, Safari, etc, para ver o site ao vivo.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🌐 Como Fazer o Deploy na Vercel (Colocar no ar!)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Como o projeto está usando Vite/React, a subida na plataforma Vercel é extremamente amigável:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Método mais fácil (Via Dashboard do GitHub)
+Se você for empurrar ("*push*") seu código para o **GitHub**:
+1. Faça login na sua conta da **[Vercel](https://vercel.com/)**.
+2. Clique no painel central em **"Add New Project"**.
+3. Na área de importar projetos (Import Git Repository), **vincule o seu GitHub** com a Vercel e escolha o repositório da `austen`.
+4. Aperte o botão azul **"Import"**. E apenas espere! A Vercel fará a leitura automática de que o site utiliza "Vite" e aplicará todos os comandos de build de trás dos panos. Assim que processar, ela dará a você a URL gratuita onde o site está vivo (por exemplo: `https://austen-solutions.vercel.app`), de onde você poderá customizar para o seu domínio final.
+
+### Método Alternativo (Via Vercel CLI Direto pelo Terminal)
+Se não for usar o GitHub e preferir enviar da sua exata máquina direto pro ar:
+1. Instale o kit da vercel (via terminal): `npm i -g vercel`.
+2. Estando dentro da pasta da `austen/`, apenas rode o comando isolado `vercel`.
+3. Será exibida uma autenticação via navegador (você faz o login) e então ele fará upload da sua pasta direto pra nuvem e você já ganha a URL definitiva.
+
+---
+
+_Desenhado e estruturado por Rapha & AI._
