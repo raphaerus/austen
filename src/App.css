@@ -1,0 +1,7 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow-x: hidden;
+  padding-top: 90px; /* Space for fixed header */
+}

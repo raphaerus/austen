@@ -1,0 +1,104 @@
+.footer-section {
+  padding-top: 6rem;
+  background: var(--brand-blue);
+  color: var(--text-inverse);
+  position: relative;
+}
+
+.footer-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: var(--brand-teal);
+}
+
+.footer-cta {
+  text-align: center;
+  margin-bottom: 5rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-cta h2 {
+  font-size: 2.5rem;
+  color: var(--text-inverse);
+  margin-bottom: 1.5rem;
+}
+
+.footer-cta p {
+  font-size: 1.125rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.9;
+}
+
+.footer-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-brand .logo-text {
+  font-family: 'Outfit', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+  letter-spacing: -1px;
+}
+
+.footer-brand .logo-tag {
+  font-size: 0.8rem;
+  color: var(--brand-teal);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-info {
+  display: flex;
+  gap: 2rem;
+  font-size: 0.95rem;
+  flex-wrap: wrap;
+  opacity: 0.9;
+}
+
+.footer-info p {
+  display: flex;
+  align-items: center;
+}
+
+.footer-copyright {
+  text-align: center;
+  padding: 1.5rem 0;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .footer-info {
+    justify-content: center;
+  }
+}
