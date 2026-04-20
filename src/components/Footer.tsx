@@ -21,7 +21,7 @@ const Footer = () => {
         <div className="footer-bottom">
           <div className="footer-brand">
             <span className="logo-text">austen</span>
-            <span className="logo-tag">ENGINEERING & SOLUTIONS</span>
+            <span className="logo-tag">ENGENHARIA & SOLUÇÕES</span>
           </div>
           <div className="footer-info">
             <p>

@@ -1,6 +1,6 @@
 export const SITE_CONFIG = {
   company: {
-    name: 'Austen Engineering & Solutions',
+    name: 'Austen Engenharia & Soluções',
     shortName: 'austen',
     description: 'Desenvolvemos soluções tecnológicas avançadas com RPA, Engenharia e Integração IA.',
   },

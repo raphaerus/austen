@@ -19,7 +19,7 @@ const Header = () => {
               austen
             </text>
             <text x="4" y="85" fontFamily="'Inter', sans-serif" fontWeight="600" fontSize="20" fill="var(--brand-blue)" letterSpacing="1.5">
-              ENGINEERING & SOLUTIONS
+              ENGENHARIA & SOLUÇÕES
             </text>
           </svg>
         </div>
